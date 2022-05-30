@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title img:"donate.jpg"> click 2 pay </title>
+        <title href=" https://thumbs.dreamstime.com/z/ppc-click-pay-payment-web-flat-line-filled-icon-beautiful-logo-button-over-yellow-background-ui-ux-website-mobile-145348663.jpg"> click 2 pay </title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -24,7 +24,8 @@
                 <div class="donatebox">
                     <i class="fas fa-user" style="font-size: 380%; text-align: center;"></i>
                     <h2>"Think for good and donate for needy person."</h2>
-                    <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_FNmjTJSGXBYIfp"> </script> </form>
+                    <form><script src = "https://cdn.razorpay.com/static/widget/payment-button.js"
+data-payment_button_id = "pl_FNmjTJSGXBYIfp" </script> </form>
                 </div>
             </div>
         </div>
@@ -59,7 +60,7 @@
                     },
                   };
                   var rzp1 = new Razorpay(options);
-                  document.getElementById("rzp-button1").onclick = function (
+                  document.getElementById("pl_FNmjTJSGXBYIfp").onclick = function (
                     e
                   ) {
                     rzp1.open();
