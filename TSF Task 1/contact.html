@@ -7,7 +7,91 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
+    <style>
     <body>
+        
+        background-image:url("https://th.bing.com/th/id/R.9302d8f7601bb9d338ef3567e386cc2c?rik=ME18SP0ikjxk2A&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fVrmXlXD.jpg&ehk=YuIXCB1rdoj3ODTCJolC2YZf1Nc728OqoRMw%2b3azsmc%3d&risl=&pid=ImgRaw&r=0");
+        <nav class="navbar navbar-expand-sm my-2">
+            <a class="navbar-brand ml-5" href="#">Rising Star Foundation</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <i class="fas fa-bars" style="color: #fff;font-size: 150%;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+
+        <div class="container">
+            <div class="row">
+                <div class="donatebox">
+                    <i class="fas fa-user" style="font-size: 380%; text-align: center;"></i>
+                    <h2>"Think for good and donate for needy person."</h2>
+                    <!--<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_FxN5kxNxBryV92"> </script> </form>-->
+                </div>
+            </div>
+        </div>
+        
+        <h3 class="my-2" style="color:blue"> Donate us</h3>
+        <input type="text" class="form-control my-2 placeholder="enter amount here"/>
+        
+        <div class="container text-center mt-3">
+            <button class="btn">PAY</button> </div>
+        
+      <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_JbXTTQDGBpT3jB" > </script> </form>
+
+<script type="text/javascript" src="https://checkout.razorpay.com/v1/razorpay.js"></script>
+</head>
+<input type="button" id="razorGateway" name="submit" class="submit action-button"
+                                    value="Pay" />
+<script type="text/javascript"> 
+            var options = {
+            "key": "rzp_test_kxAp8YUFmQz6MV", // Enter the Key ID generated from the Dashboard
+            "amount": "", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or INR 500.
+            "currency": "INR",
+            "name": "Nikhil",
+            "description": "please contribute",
+            "image": "image",
+            "order_id": "",//This is a sample Order ID. Create an Order using Orders API. (https://razorpay.com/docs/payment-gateway/orders/integration/#step-1-create-an-order). Refer the Checkout form table given below
+            "handler": function (response){
+                alert(response.razorpay_payment_id);
+            },
+            "prefill": {
+                "name": "",
+                "email": "",
+                "contact": ""
+            },
+            "notes": {
+                "address": "note value"
+            },
+            "theme": {
+                "color": "#EA5B29"
+            }
+        };
+        var rzp1 = new window.Razorpay(options);
+        document.getElementById('razorGateway').onclick = function(e){
+            rzp1.open();
+            e.preventDefault();
+        }
+</script>
+
+
+
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/c252d9c8b4.js" crossorigin="anonymous"></script>
+    </body>
+    </style>
+    </html>
+
         <nav class="navbar navbar-expand-sm my-2">
             <a class="navbar-brand ml-5" href="#">Rising Star Foundation</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -84,4 +168,5 @@
         <script src="js/main.js"></script>
         
     </body>
+</style>
     </html>
