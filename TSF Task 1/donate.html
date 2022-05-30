@@ -31,44 +31,40 @@
                 </div>
             </div>
         </div>
- <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-                <script>
-                  var options = {
-                    key: "rzp_test_3nHYocooJzBCP4", // Enter the Key ID generated from the Dashboard
-                    amount: "", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-                    currency: "INR",
-                    name: "Nikhil",
-                    description: "Pay as your wish",
-                    handler: function (response) {
-                      if (
-                        typeof response.razorpay_payment_id == "undefined" ||
-                        response.razorpay_payment_id < 1
-                      ) {
-                        swal({
-                          title: "Please try again later!",
-                          icon: "error",
-                          button: "Close",
-                        });
-                      } else {
-                        swal({
-                          title: "Thank You!",
-                          icon: "success",
-                          button: "Close",
-                        });
-                      }
-                    },
-                    theme: {
-                      color: "#3399cc",
-                    },
-                  };
-                  var rzp1 = new Razorpay(options);
-                  document.getElementById("rzp_test_3nHYocooJzBCP4").onclick = function (
-                    e
-                  ) {
-                    rzp1.open();
-                    e.preventDefault();
-                  };
-                </script>
+<script type="text/javascript" src="https://checkout.razorpay.com/v1/razorpay.js"></script>
+</head>
+<input type="button" id="razorGateway" name="submit" class="submit action-button"
+                                    value="Pay" />
+<script type="text/javascript"> 
+            var options = {
+            "key": "rzp_test_1234567UHGSssj", // Enter the Key ID generated from the Dashboard
+            "amount": "", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or INR 500.
+            "currency": "INR",
+            "name": "Nikhil",
+            "description": "pay as your wish",
+            "image": "image",
+            "order_id": "",//This is a sample Order ID. Create an Order using Orders API. (https://razorpay.com/docs/payment-gateway/orders/integration/#step-1-create-an-order). Refer the Checkout form table given below
+            "handler": function (response){
+                alert(response.razorpay_payment_id);
+            },
+            "prefill": {
+                "name": "",
+                "email": "",
+                "contact": ""
+            },
+            "notes": {
+                "address": "note value"
+            },
+            "theme": {
+                "color": "#EA5B29"
+            }
+        };
+        var rzp1 = new window.Razorpay(options);
+        document.getElementById('razorGateway').onclick = function(e){
+            rzp1.open();
+            e.preventDefault();
+        }
+</script>
 
 
 
